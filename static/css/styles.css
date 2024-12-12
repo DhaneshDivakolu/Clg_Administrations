@@ -154,18 +154,18 @@ a{
     border: 2px solid black;
 }
 
-.register-div{
+.register-div, .update-div, .delete-div{
     float: left;
     width: 40%;
     margin: 2% 0% 0% 30%;
 }
-.register-div input{
+.register-div input, .update-div input, .update-div select, .delete-div input, .delete-div button{
     float: left;
     width: 100%; 
     margin-top: 2%;
     font-size: 20px;
 }
-.register-div button{
+.register-div button, .update-div button{
     float: left;
     width: 95%;
     font-size: 30px;
