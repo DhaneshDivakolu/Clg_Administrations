@@ -130,6 +130,10 @@ a{
     font-size: 25px;
     padding: 1% 0% 1% 0%;   
 }
+.details option{
+    background-color: transparent;
+    color: black;
+}
 .footer{
     float: left;
     width: 100%;
@@ -159,7 +163,7 @@ a{
     width: 40%;
     margin: 2% 0% 0% 30%;
 }
-.register-div input, .update-div input, .update-div select, .delete-div input, .delete-div button{
+.register-div input, .register-div select, .update-div input, .update-div select, .delete-div input, .delete-div button{
     float: left;
     width: 100%; 
     margin-top: 2%;
@@ -176,7 +180,7 @@ a{
     float: left;
     width: 60%;
     /* border: 3px solid black; */
-    margin: 10% 0% 0% 5%;
+    margin: 10% 0% 0% 7%;
 }
 
 .view-div table{
@@ -185,11 +189,11 @@ a{
     text-align: center;
 }
 .view-div thead{
-    font-size: 30px;
+    font-size: 25px;
     background-color: antiquewhite;
 }
 .view-div tbody{
-    font-size: 25px;
+    font-size: 20px;
 }
 .video-div{
     float: left;

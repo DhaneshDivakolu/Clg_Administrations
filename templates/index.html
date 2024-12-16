@@ -60,16 +60,16 @@
                 </P>
             </div>
             <div class="details">
-                <form action="" method="post" onsubmit="alert('Call requested')">
+                <form action="/callme" method="post" onsubmit="alert('Call requested')">
                     <input type="text" name="name" placeholder="name" required>
                     <input type="email" name="email" placeholder="email" required>
                     <input type="number" name="num" placeholder="number" required>
                     <select name="course" style="width: 75%;">
                         <option value="" disabled selected>select course</option>
-                        <option value="computers">computers</option>
-                        <option value="electronics">electronics</option>
-                        <option value="robotics">robotics</option>
-                        <option value="mining">mining</option>
+                        <option value="computers">CSE</option>
+                        <option value="electronics">ECE</option>
+                        <option value="IT">IT</option>
+                        <option value="EEE">EEE</option>
                     </select>
                     <button type="submit">CallMe</button> 
                 </form>

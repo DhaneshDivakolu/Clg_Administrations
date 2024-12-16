@@ -5,6 +5,7 @@ app = Flask(__name__)
 my_client = MongoClient("localhost", 27017)
 my_db= my_client["Clg_Administrations"]
 students = my_db["students"]
+callme = my_db["callme"]
 
 @app.route("/", methods=["GET"])
 def homepage():
@@ -56,5 +57,18 @@ def delete():
 @app.route("/campus", methods=["GET","POST"])
 def campus():
     return render_template("campus.html")
+ 
+@app.route("/callme",methods = ["GET","POST"])
+def call_me():
+    if request.method ==  "POST":
+        name = request.form["name"]
+        email = request.form["email"]
+        num = request.form["num"]
+        course = request.form["course"]
 
-app.run(debug=True)
+        students.insert_one({"name ":name, "email" :email, "num": num, "course": course})
+        return redirect("/")
+    return render_template("index.html")
+
+
+app.run(port=5001, debug=True)
