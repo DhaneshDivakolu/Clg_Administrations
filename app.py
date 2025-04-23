@@ -57,7 +57,7 @@ def delete():
 @app.route("/campus", methods=["GET","POST"])
 def campus():
     return render_template("campus.html")
- 
+
 @app.route("/callme",methods = ["GET","POST"])
 def call_me():
     if request.method ==  "POST":
@@ -66,9 +66,12 @@ def call_me():
         num = request.form["num"]
         course = request.form["course"]
 
-        students.insert_one({"name ":name, "email" :email, "num": num, "course": course})
+        callme.insert_one({"name":name, "email" :email, "num": num, "course": course})
         return redirect("/")
     return render_template("index.html")
-
+@app.route("/callmedata", methods =["GET"])
+def CallMe():
+    data = list(callme.find())
+    return render_template("CallMe.html",output = data)
 
 app.run(port=5001, debug=True)
